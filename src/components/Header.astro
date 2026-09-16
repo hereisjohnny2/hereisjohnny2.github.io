@@ -1,0 +1,16 @@
+---
+import Navigation from "./Navigation.astro";
+const { pageTitle } = Astro.props;
+---
+
+<header>
+    <Navigation />
+    <h1>{pageTitle}</h1>
+</header>
+
+<style>
+    h1 {
+        color: purple;
+        font-size: 4rem;
+    }
+</style>
