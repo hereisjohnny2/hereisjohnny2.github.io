@@ -1,0 +1,26 @@
+{
+  "name": "hereisjohnny2.github.io",
+  "version": "1.0.0",
+  "description": "Site Pessoal",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hereisjohnny2/hereisjohnny2.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/hereisjohnny2/hereisjohnny2.github.io/issues"
+  },
+  "homepage": "https://github.com/hereisjohnny2/hereisjohnny2.github.io#readme",
+  "dependencies": {
+    "astro": "^7.3.3"
+  }
+}
