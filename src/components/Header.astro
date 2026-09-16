@@ -3,7 +3,10 @@ import Navigation from "./Navigation.astro";
 const { pageTitle } = Astro.props;
 ---
 
-<header>
+<header class="mx-auto flex w-full max-w-5xl items-center justify-between px-5 pt-5 sm:px-8 sm:pt-8">
+    <a href="/" class="group flex items-center gap-3 no-underline">
+        <span class="grid size-10 place-items-center rounded-full bg-[var(--accent)] font-serif text-xl font-bold text-white transition-transform group-hover:-rotate-6">J</span>
+        <span class="text-sm font-bold tracking-[0.18em] text-[var(--ink)] uppercase">Here Is Johnny</span>
+    </a>
     <Navigation />
-    <h1 class="text-4xl font-bold underline">{pageTitle}</h1>
 </header>

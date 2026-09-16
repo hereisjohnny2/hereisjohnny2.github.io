@@ -1,9 +1,11 @@
 ---
 import Menu from "./Menu.astro"
 ---
-<Menu />
-<nav id="main-menu" class="nav-links">
+<div class="relative">
+    <Menu />
+    <nav id="main-menu" class="nav-links" aria-label="Main navigation">
     <a href="/">Home</a>
     <a href="/about/">About</a>
     <a href="/blog/">Blog</a>
-</nav>
+    </nav>
+</div>

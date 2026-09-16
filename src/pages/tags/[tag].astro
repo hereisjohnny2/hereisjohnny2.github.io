@@ -26,12 +26,14 @@ const { posts } = Astro.props;
 ---
 
 <BaseLayout pageTitle={tag}>
-    <p>Posts tagged with {tag}</p>
-    <ul>
+    <a class="text-sm font-bold uppercase tracking-[0.16em] no-underline" href="/tags/">← All tags</a>
+    <h1 class="mt-8 font-serif text-6xl leading-[0.92] tracking-tight sm:text-7xl">#{tag}<span class="text-[var(--accent)]">.</span></h1>
+    <p class="mt-6 text-lg text-[var(--muted)]">Posts tagged with {tag}</p>
+    <ul class="mt-10 grid list-none gap-4 p-0">
         {
             posts.map((post: any) => (
-                <li>
-                    <a href={post.url}>{post.frontmatter.title}</a>
+                <li class="rounded-2xl border border-[var(--line)] bg-[var(--panel)] p-6">
+                    <a class="font-serif text-3xl text-[var(--ink)] no-underline hover:text-[var(--accent-dark)]" href={post.url}>{post.frontmatter.title}</a>
                 </li>
             ))
         }

@@ -3,5 +3,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout pageTitle="Home">
-    <h2>Welcome to my space</h2>
+    <section class="grid items-end gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+        <div>
+            <p class="mb-5 text-sm font-bold tracking-[0.2em] text-[var(--accent-dark)] uppercase">Personal notes · experiments · life</p>
+            <h1 class="max-w-3xl font-serif text-6xl leading-[0.9] tracking-tight text-[var(--ink)] sm:text-8xl">Welcome to my space<span class="text-[var(--accent)]">.</span></h1>
+            <p class="mt-8 max-w-xl text-lg leading-relaxed text-[var(--muted)] sm:text-xl">A small corner of the internet for things I am learning, making, and thinking about.</p>
+            <div class="mt-10 flex flex-wrap gap-3">
+                <a class="rounded-full bg-[var(--ink)] px-5 py-3 text-sm font-bold text-white no-underline transition-transform hover:-translate-y-0.5 hover:text-white" href="/blog/">Read the journal <span aria-hidden="true">↗</span></a>
+                <a class="rounded-full border border-[var(--line)] bg-[var(--panel)] px-5 py-3 text-sm font-bold text-[var(--ink)] no-underline hover:text-[var(--ink)]" href="/about/">A little about me</a>
+            </div>
+        </div>
+    </section>
 </BaseLayout>

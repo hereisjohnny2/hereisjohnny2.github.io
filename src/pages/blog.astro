@@ -8,12 +8,19 @@ const allPosts = Object.values(
 ---
 
 <BaseLayout pageTitle="Blog">
-    <p>This is where I supposed to write my blog</p>
-    <ul>
+    <section class="mb-12 max-w-2xl">
+        <p class="text-sm font-bold tracking-[0.2em] text-[var(--accent-dark)] uppercase">The journal</p>
+        <h1 class="mt-4 font-serif text-6xl leading-[0.92] tracking-tight sm:text-7xl">Things I am thinking about<span class="text-[var(--accent)]">.</span></h1>
+        <p class="mt-6 text-lg leading-relaxed text-[var(--muted)]">Notes from the process of learning, building, and figuring things out.</p>
+    </section>
+    <ul class="m-0 grid list-none gap-4 p-0">
         {
             allPosts.map((post: any) => (
-                <li>
-                    <a href={post.url}>{post.frontmatter.title}</a>
+                <li class="group rounded-2xl border border-[var(--line)] bg-[var(--panel)] p-6 transition-transform hover:-translate-y-1 sm:p-8">
+                    <a class="flex items-center justify-between gap-5 font-serif text-3xl text-[var(--ink)] no-underline group-hover:text-[var(--accent-dark)]" href={post.url}>
+                        <span>{post.frontmatter.title}</span><span class="font-sans text-2xl" aria-hidden="true">↗</span>
+                    </a>
+                    <p class="mt-3 mb-0 text-[var(--muted)]">{post.frontmatter.description}</p>
                 </li>
             ))
         }

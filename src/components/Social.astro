@@ -2,15 +2,6 @@
 const { platform, username } = Astro.props;
 ---
 
-<p>
-    <a href={`https://www.${platform}.com/${username}`}>{platform}</a>
+<p class="m-0">
+    <a class="font-bold text-[var(--ink)] no-underline hover:text-[var(--accent-dark)]" href={`https://www.${platform}.com/${username}`}>@{username} <span aria-hidden="true">↗</span></a>
 </p>
-
-<style>
-    a {
-        padding: 0.5rem 1rem;
-        color: white;
-        background-color: #4c1d95;
-        text-decoration: none;
-    }
-</style>

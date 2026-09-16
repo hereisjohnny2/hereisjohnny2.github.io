@@ -10,32 +10,15 @@ const pageTitle = "Tag Index";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <div class="tags">
+    <section class="max-w-2xl">
+        <p class="text-sm font-bold tracking-[0.2em] text-[var(--accent-dark)] uppercase">Browse by topic</p>
+        <h1 class="mt-4 font-serif text-6xl leading-[0.92] tracking-tight sm:text-7xl">All tags<span class="text-[var(--accent)]">.</span></h1>
+    </section>
+    <div class="mt-12 flex flex-wrap gap-3">
         {
             tags.map((tag) => (
-                <p class="tag">
-                    <a href={`${tag}`}>{tag}</a>
-                </p>
+                <a class="rounded-full border border-[var(--line)] bg-[var(--panel)] px-5 py-3 font-bold text-[var(--ink)] no-underline hover:border-[var(--accent)] hover:text-[var(--accent-dark)]" href={`${tag}`}>#{tag}</a>
             ))
         }
     </div>
-    <style>
-        a {
-            color: #00539f;
-        }
-
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .tag {
-            margin: 0.25em;
-            border: dotted 1px #a1a1a1;
-            border-radius: 0.5em;
-            padding: 0.5em 1em;
-            font-size: 1.15em;
-            background-color: #f8fcfd;
-        }
-    </style>
 </BaseLayout>

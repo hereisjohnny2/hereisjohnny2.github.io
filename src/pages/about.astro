@@ -4,18 +4,15 @@ const skillColor = "crimson";
 ---
 
 <BaseLayout pageTitle="About Me">
-    <h2>... and my new Astro site!</h2>
-    <p>
-        I am working through Astro's introductory tutorial. This is the second
-        page on my website, and it's the first one I built myself!
-    </p>
-    <p>
-        This site will update as I complete more of the tutorial, so keep
-        checking back and see how my journey is going!
-    </p>
-    <style define:vars={{ skillColor }}>
-        p {
-            color: var(--skillColor);
-        }
-    </style>
+    <section class="grid gap-12 lg:grid-cols-[0.65fr_1fr] lg:gap-20">
+        <div>
+            <p class="text-sm font-bold tracking-[0.2em] text-[var(--accent-dark)] uppercase">The short version</p>
+            <h1 class="mt-4 font-serif text-6xl leading-[0.92] tracking-tight sm:text-7xl">About me<span class="text-[var(--accent)]">.</span></h1>
+        </div>
+        <div class="max-w-2xl text-lg leading-relaxed text-[var(--muted)] sm:text-xl">
+            <p class="mt-0">I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
+            <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going.</p>
+            <div class="mt-10 border-l-4 border-[var(--accent)] pl-5 font-serif text-2xl leading-tight text-[var(--ink)]">A work in progress is still a place worth visiting.</div>
+        </div>
+    </section>
 </BaseLayout>
