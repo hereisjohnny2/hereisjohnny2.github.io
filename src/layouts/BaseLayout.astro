@@ -13,9 +13,9 @@ const { pageTitle } = Astro.props;
         <meta name="viewport" content="width=device-width" />
         <title>{pageTitle}</title>
     </head>
-    <body class="min-h-screen">
+    <body class="flex min-h-screen flex-col">
         <Header pageTitle={pageTitle} />
-        <main class="mx-auto w-full max-w-5xl px-5 pb-20 pt-10 sm:px-8 sm:pt-16">
+        <main class="flex-1 mx-auto w-full max-w-5xl px-5 pb-20 pt-10 sm:px-8 sm:pt-16">
             <slot />
         </main>
         <Footer />
