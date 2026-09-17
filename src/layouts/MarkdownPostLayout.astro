@@ -5,11 +5,26 @@ const { frontmatter } = Astro.props;
 
 <BaseLayout pageTitle={frontmatter.title}>
     <article class="mx-auto max-w-3xl">
-        <a class="text-sm font-bold uppercase tracking-[0.16em] no-underline" href="/blog/">← Back to journal</a>
-        <p class="mt-8 text-sm font-bold tracking-[0.12em] text-[var(--muted)] uppercase">{frontmatter.pubDate.toString().slice(0, 10)} · {frontmatter.author}</p>
-        <h1 class="mt-3 font-serif text-5xl leading-[0.98] tracking-tight text-[var(--ink)] sm:text-7xl">{frontmatter.title}</h1>
-        <p class="mt-6 max-w-2xl text-xl leading-relaxed text-[var(--muted)]"><em>{frontmatter.description}</em></p>
-        <div class="prose prose-lg mt-12 max-w-none text-[var(--ink)] prose-headings:font-serif prose-a:text-[var(--accent-dark)]">
+        <a
+            class="text-sm font-bold uppercase tracking-[0.16em] no-underline"
+            href="/blog/">← Back to journal</a
+        >
+        <p
+            class="mt-8 text-sm font-bold tracking-[0.12em] text-(--muted) uppercase"
+        >
+            {frontmatter.pubDate.toString().slice(0, 10)} · {frontmatter.author}
+        </p>
+        <h1
+            class="mt-3 font-serif text-5xl leading-[0.98] tracking-tight text-(--ink) sm:text-7xl"
+        >
+            {frontmatter.title}
+        </h1>
+        <p class="mt-6 max-w-2xl text-xl leading-relaxed text-(--muted)">
+            <em>{frontmatter.description}</em>
+        </p>
+        <div
+            class="prose prose-lg mt-12 max-w-none space-y-6 text-(--ink) prose-headings:font-serif prose-a:text-[var(--accent-dark)]"
+        >
             <slot />
         </div>
     </article>
