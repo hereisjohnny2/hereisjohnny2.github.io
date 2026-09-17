@@ -16,7 +16,7 @@ const { pageTitle } = Astro.props;
             const savedTheme = localStorage.getItem("theme");
             if (savedTheme === "dark") document.documentElement.dataset.theme = "dark";
         </script>
-        <title>{pageTitle}</title>
+        <title>{pageTitle} - hereisjohnny2</title>
     </head>
     <body class="flex min-h-screen flex-col">
         <Header pageTitle={pageTitle} />
