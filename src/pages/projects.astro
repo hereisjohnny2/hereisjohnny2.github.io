@@ -1,0 +1,36 @@
+---
+import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectItem from "../components/ProjectItem.astro";
+
+const projects = [
+    {
+        name: "Pixie Dixie",
+        description: "Um app simples para pode desenvolver pixel art no navegador. Capaz de criar animações e exportar para GIF e PNG. Esse projeto eu criei no intuito de que futuramente planejo me dedicar ao desenvolvimento de jogos. Os apps para criar pixel art me pareceram muito complicados de usar então resolvi criar um que eu me adaptasse melhor.",
+        url: "https://hereisjohnny2.github.io/pixie_dixie/",
+    },
+];
+---
+
+<BaseLayout pageTitle="Projetos">
+    <section class="mb-12 max-w-2xl">
+        <p
+            class="text-sm font-bold tracking-[0.2em] text-(--accent-dark) uppercase"
+        >
+            Projetos Pessoais
+        </p>
+        <h1
+            class="mt-4 font-serif text-6xl leading-[0.92] tracking-tight sm:text-7xl"
+        >
+            Coisas que eu tenho criado<span class="text-(--accent)"
+                >.</span
+            >
+        </h1>
+        <p class="mt-6 text-lg leading-relaxed text-(--muted)">
+            Não restrito a programação apenas...
+        </p>
+    </section>
+    <section class="grid gap-4" aria-label="Projetos pessoais">
+        {projects.map((project) => <ProjectItem {...project} />)}
+    </section>
+</BaseLayout>
