@@ -1,18 +1,37 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const skillColor = "crimson";
 ---
 
 <BaseLayout pageTitle="About Me">
     <section class="grid gap-12 lg:grid-cols-[0.65fr_1fr] lg:gap-20">
         <div>
-            <p class="text-sm font-bold tracking-[0.2em] text-[var(--accent-dark)] uppercase">The short version</p>
-            <h1 class="mt-4 font-serif text-6xl leading-[0.92] tracking-tight sm:text-7xl">About me<span class="text-[var(--accent)]">.</span></h1>
+            <p
+                class="text-sm font-bold tracking-[0.2em] text-(--accent-dark) uppercase"
+            >
+                The short version
+            </p>
+            <h1
+                class="mt-4 font-serif text-6xl leading-[0.92] tracking-tight sm:text-7xl"
+            >
+                About me<span class="text-(--accent)">.</span>
+            </h1>
         </div>
-        <div class="max-w-2xl text-lg leading-relaxed text-[var(--muted)] sm:text-xl">
-            <p class="mt-0">I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
-            <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going.</p>
-            <div class="mt-10 border-l-4 border-[var(--accent)] pl-5 font-serif text-2xl leading-tight text-[var(--ink)]">A work in progress is still a place worth visiting.</div>
+        <div
+            class="max-w-2xl text-lg leading-relaxed text-(--muted) sm:text-xl"
+        >
+            <p class="mt-0">
+                Meu nome é João Marcelo e sou desenvolvedor. Ou melhor, hoje trabalho como cientista de dados em uma multinacional chamada Fugro, onde meu trabalho é desenvolver aplicações que ajudam na analise e no processamento de dados geológicos. 
+            </p>
+            <p class="mt-8">
+            
+                Além de desenvolvedor/cientista de dados também sou entusiasta de carros, principalmente de hondinhas pre-2008. Tenho um Honda Civic 1995 ex, vermelhão, turbo e acertado com um FuelTech. Gosto de acompanhar corridas da WEC e da IMSA desde de 2026. 
+            </p>
+            <p class="mt-8">
+                Também sou músico, toco guitarra e contra-baixo, apesar de ultimamente o violão de nylon ter sido meu melhor parceiro. Acho que é porque ele ja está, sempre disponível, sem precisar ligar nada. Então toco uma samba, ou uma bossa, as vezes uma MPB ou Jazz... 
+            </p>
+            <p class="mt-8">
+                Por fim quero mencionar que tambem tenho gostado muito de ler. Desde de 2023 eu tenho lido pelo menos 1 livro por mês, e esse ano deve ser bem mais que isso. Gosto de fantasia medieval e tambem clássicos do realismo, seja Machado de Assis ou Dostoiévski.
+            </p>
         </div>
     </section>
 </BaseLayout>

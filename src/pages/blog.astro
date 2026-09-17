@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogItem from "../components/BlogItem.astro";
 
 const allPosts = Object.values(
     import.meta.glob("./posts/*.md", { eager: true }),
@@ -12,32 +13,48 @@ const tags = [
 
 <BaseLayout pageTitle="Blog">
     <section class="mb-12 max-w-2xl">
-        <p class="text-sm font-bold tracking-[0.2em] text-[var(--accent-dark)] uppercase">The journal</p>
-        <h1 class="mt-4 font-serif text-6xl leading-[0.92] tracking-tight sm:text-7xl">Things I am thinking about<span class="text-[var(--accent)]">.</span></h1>
-        <p class="mt-6 text-lg leading-relaxed text-[var(--muted)]">Notes from the process of learning, building, and figuring things out.</p>
+        <p
+            class="text-sm font-bold tracking-[0.2em] text-(--accent-dark) uppercase"
+        >
+            Meu diário
+        </p>
+        <h1
+            class="mt-4 font-serif text-6xl leading-[0.92] tracking-tight sm:text-7xl"
+        >
+            Sobre coisas que eu tenho pensado<span class="text-(--accent)"
+                >.</span
+            >
+        </h1>
+        <p class="mt-6 text-lg leading-relaxed text-(--muted)">
+            E outras coisitas mais...
+        </p>
     </section>
-    <section class="mb-10 border-y border-[var(--line)] py-5" aria-labelledby="available-tags">
+    <section
+        class="mb-10 border-y border-(--line) py-5"
+        aria-labelledby="available-tags"
+    >
         <div class="flex flex-wrap items-center gap-x-5 gap-y-3">
-            <h2 id="available-tags" class="m-0 text-sm font-bold tracking-[0.14em] text-[var(--muted)] uppercase">Available tags</h2>
+            <h2
+                id="available-tags"
+                class="m-0 text-sm font-bold tracking-[0.14em] text-(--muted) uppercase"
+            >
+                Tags
+            </h2>
             <div class="flex flex-wrap gap-2">
                 {
                     tags.map((tag) => (
-                        <a class="rounded-full bg-[var(--fresh)] px-3 py-1 text-sm font-bold text-[var(--ink)] no-underline hover:bg-[var(--accent)] hover:text-[var(--ink)]" href={`/tags/${tag}/`}>#{tag}</a>
+                        <a
+                            class="rounded-full bg-(--fresh) px-3 py-1 text-sm font-bold text-(--ink) no-underline hover:bg-(--accent) hover:text-(--ink)"
+                            href={`/tags/${tag}/`}
+                        >
+                            #{tag}
+                        </a>
                     ))
                 }
             </div>
         </div>
     </section>
     <ul class="m-0 grid list-none gap-4 p-0">
-        {
-            allPosts.map((post: any) => (
-                <li class="group rounded-2xl border border-[var(--line)] bg-[var(--panel)] p-6 transition-transform hover:-translate-y-1 sm:p-8">
-                    <a class="flex items-center justify-between gap-5 font-serif text-3xl text-[var(--ink)] no-underline group-hover:text-[var(--accent-dark)]" href={post.url}>
-                        <span>{post.frontmatter.title}</span><span class="font-sans text-2xl" aria-hidden="true">↗</span>
-                    </a>
-                    <p class="mt-3 mb-0 text-[var(--muted)]">{post.frontmatter.description}</p>
-                </li>
-            ))
-        }
+        {allPosts.map((post: any) => <BlogItem post={post} />)}
     </ul>
 </BaseLayout>
